@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import './iss-location.css'
-import RenderIssLocation from './RenderIssLocation'
+import IssCoordinates from './IssCoordinates'
+import IssMapLocation from './IssMapLocation'
 
 const IssLocation = () => {
   const [getLocation, setGetLocation] = useState(false)
+  const [showMap, setShowMap] = useState(false)
+
+  const handleShowMap = () => {
+    if (showMap === false) {
+      setShowMap(true)
+    }
+  }
 
   const handleOnGetLocation = () => {
     setGetLocation(true)
@@ -15,9 +23,16 @@ const IssLocation = () => {
       <button onClick={handleOnGetLocation}>Tell Me!</button>
     </>
   )
+
+    const issData = (
+      <>
+        {showMap ? <IssMapLocation /> : <IssCoordinates showMap={handleShowMap} />}
+      </>
+    )
+
   return (
     <>
-      {getLocation ? <RenderIssLocation /> : userQuestion}
+      {getLocation ? issData : userQuestion}
     </>
   )
 }

@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-const RenderIssLocation = () => {
+const IssCoordinates = ({ showMap }) => {
   const [loaded, setLoaded] = useState(false)
   const [issLocation, setIssLocation] = useState({ longitude: null, latitude: null})
-
-  const handleShowOnMap = () => {
-    // Load map.
-  }
 
   useEffect(() => {
     fetch('http://api.open-notify.org/iss-now.json').then(res => {
@@ -26,7 +22,7 @@ const RenderIssLocation = () => {
       <h1>Current position of ISS:</h1>
       <p>Latitude: {issLocation.latitude}</p>
       <p>Longitude: {issLocation.longitude}</p>
-      <button onClick={handleShowOnMap}>Show On Map</button>
+      <button onClick={() => showMap()}>Show On Map</button>
     </>
   )
 
@@ -37,4 +33,4 @@ const RenderIssLocation = () => {
   )
 }
 
-export default RenderIssLocation
+export default IssCoordinates
