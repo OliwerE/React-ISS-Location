@@ -1,10 +1,10 @@
 import React from 'react'
 import image from '../img/icons8-marker-48.png'
 
-const MapMarker = () => {
+const MapMarker = ({ title }) => {
   return (
     <>
-      <img src={image} alt="Location" />
+      <img src={image} alt="Location" title={title} />
     </>
   )
 }
