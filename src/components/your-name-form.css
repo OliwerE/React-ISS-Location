@@ -1,6 +1,27 @@
 @charset "UTF-8";
 
-form {
+#your-name-form form {
   margin: 0;
   padding: 0;
+}
+
+#your-name-form form #name {
+  width: 250px;
+  height: 30px;
+}
+
+#your-name-form form #submit-button {
+  margin-top: 20px;
+  float: right;
+  width: 100px;
+  height: 30px;
+  background-color: #6de249;
+  border: none;
+  font-size: 1.20rem;
+  border-radius: 0.2rem;
+}
+
+#your-name-form form #submit-button:hover {
+  cursor: pointer;
+  background-color: #6de249b2;
 }

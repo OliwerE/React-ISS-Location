@@ -10,8 +10,8 @@ const IssLocation = () => {
   const [showLocation, setShowLocation] = useState(false)
   const [showMap, setShowMap] = useState(false)
 
-  useEffect(() => {
-    fetch('http://api.open-notify.org/iss-now.json').then(res => {
+  const getIssLocation = async () => {
+    await fetch('http://api.open-notify.org/iss-now.json').then(res => {
       return res.json()
     }).then(json => {
       const { longitude, latitude } = json.iss_position
@@ -20,6 +20,14 @@ const IssLocation = () => {
     }).catch(err => {
       console.error(err)
     })
+  }
+
+  const handleRefreshIssLocation = () => {
+    getIssLocation()
+  }
+
+  useEffect(() => {
+    getIssLocation()
   }, [])
 
   const handleShowMap = () => {
@@ -41,14 +49,14 @@ const IssLocation = () => {
   const userQuestion = (
     <>
       <h1>Do you want to know the current position of the international space station?</h1>
-      <button onClick={handleOnGetLocation}>Tell me!</button>
+      <button id="get-iss-location-btn" onClick={handleOnGetLocation}>Tell me!</button>
     </>
   )
 
     const issData = (
       <>
         <h1>Current position of the international space station:</h1>
-        {showMap ? <IssMapLocation issLocation={issLocation} showCoordinates={handleShowCoordinates} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} />}
+        {showMap ? <IssMapLocation issLocation={issLocation} showCoordinates={handleShowCoordinates} refreshIssLocation={handleRefreshIssLocation} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} refreshIssLocation={handleRefreshIssLocation} />}
       </>
     )
 

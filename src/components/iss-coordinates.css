@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.iss-coordinates-btn {
+  margin-top: 20px;
+  width: fit-content;
+  height: 30px;
+  border: none;
+  font-size: 1.20rem;
+  border-radius: 0.2rem;
+}
+
+.iss-coordinates-btn:hover {
+  cursor: pointer;
+}
+
+#show-map-btn, #show-coordinates-btn {
+  background-color: #49c3e2;
+}
+
+#show-map-btn:hover, #show-coordinates-btn:hover {
+  background-color: #49c3e2b2;
+}
+
+
+#refresh-coordinates-btn {
+  background-color: #eea70d;
+  margin-left: 50px;
+}
+
+#refresh-coordinates-btn:hover {
+  background-color: #eea70db2;
+}

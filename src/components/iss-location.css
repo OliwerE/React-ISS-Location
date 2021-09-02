@@ -4,3 +4,19 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+#get-iss-location-btn {
+  margin-top: 20px;
+  float: right;
+  width: 100px;
+  height: 30px;
+  background-color: #6de249;
+  border: none;
+  font-size: 1.20rem;
+  border-radius: 0.2rem;
+}
+
+#get-iss-location-btn:hover {
+  cursor: pointer;
+  background-color: #6de249b2;
+}
