@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* #iss-map-location {
+  height: 800px;
+  width: 600px;
+  background-color: grey;
+} */
+#marker {
+  display: block;
+  color: red;
+  background-color: orange;
+  font-weight: bold;
+}
