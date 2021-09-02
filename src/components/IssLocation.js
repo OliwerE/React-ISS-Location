@@ -40,7 +40,7 @@ const IssLocation = () => {
 
   const userQuestion = (
     <>
-      <h1>Do you want to know the current location of the international space station?</h1>
+      <h1>Do you want to know the current position of the international space station?</h1>
       <button onClick={handleOnGetLocation}>Tell me!</button>
     </>
   )
