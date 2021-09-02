@@ -11,12 +11,12 @@ const IssMapLocation = ({ issLocation, showCoordinates, refreshIssLocation }) =>
     <div style={{ height: '100%', width: '100%' }} id="Iss-map location">
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyABWPKtKCYlTKKBbHY6PReiBB99aR2lJzY' }}
-        defaultCenter={{ lat: parseInt(latitude), lng: parseInt(longitude)}}
+        center={{ lat: latitude, lng: longitude}}
         defaultZoom={2}
       >
         <MapMarker
-          lat={parseInt(latitude)}
-          lng={parseInt(longitude)}
+          lat={latitude}
+          lng={longitude}
           title={`Latitude: ${latitude}, Longitude: ${longitude}`}
         />
       </GoogleMapReact>

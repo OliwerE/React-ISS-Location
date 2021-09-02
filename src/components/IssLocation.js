@@ -15,7 +15,7 @@ const IssLocation = () => {
       return res.json()
     }).then(json => {
       const { longitude, latitude } = json.iss_position
-      setIssLocation({ longitude, latitude })
+      setIssLocation({ longitude: parseFloat(longitude), latitude: parseFloat(latitude) })
       setLoaded(true)
     }).catch(err => {
       console.error(err)
