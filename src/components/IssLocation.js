@@ -29,6 +29,12 @@ const IssLocation = () => {
     }
   }
 
+  const handleShowCoordinates = () => {
+    if (showMap === true) {
+      setShowMap(false)
+    }
+  }
+
   const handleOnGetLocation = () => {
     setShowLocation(true)
   }
@@ -36,13 +42,13 @@ const IssLocation = () => {
   const userQuestion = (
     <>
       <h1>Do you want to know the current location of the international space station?</h1>
-      <button onClick={handleOnGetLocation}>Tell Me!</button>
+      <button onClick={handleOnGetLocation}>Tell me!</button>
     </>
   )
 
     const issData = (
       <>
-        {showMap ? <IssMapLocation issLocation={issLocation} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} />}
+        {showMap ? <IssMapLocation issLocation={issLocation} showCoordinates={handleShowCoordinates} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} />}
       </>
     )
 

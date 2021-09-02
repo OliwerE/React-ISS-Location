@@ -3,7 +3,7 @@ import './iss-map-location.css'
 import GoogleMapReact from 'google-map-react'
 import MapMarker from './MapMarker'
 
-const IssMapLocation = ({ issLocation }) => {
+const IssMapLocation = ({ issLocation, showCoordinates }) => {
   const {longitude, latitude } = issLocation
   return (
     <div style={{ height: '100%', width: '100%' }} id="Iss-map location">
@@ -19,6 +19,8 @@ const IssMapLocation = ({ issLocation }) => {
         />
       </GoogleMapReact>
       <a target="_blank" without rel="noreferrer" href="https://icons8.com/icon/13800/marker">Marker</a> icon by <a target="_blank" without rel="noreferrer" href="https://icons8.com">Icons8</a>
+      <br/>
+      <button onClick={() => showCoordinates()}>Show coordinates</button>
     </div>
   )
 }

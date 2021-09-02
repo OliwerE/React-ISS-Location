@@ -16,7 +16,7 @@ const YourName = () => {
     setHasSubmitName(true)
   }
 
-  const textBeforeName = 'Welcome back to the Linnaeus university '
+  const textBeforeName = 'Hello '
   const textAfterName = '!'
   const yourNameResponseChildComponents = [IssLocation]
   return (
