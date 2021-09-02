@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './your-name.css'
 import YourNameForm from './YourNameForm'
+import YourNameResponse from './YourNameResponse'
 
 const YourName = () => {
+  const [hasSubmitName, setHasSubmitName] = useState(false)
+  const [name, setName] = useState('')
+
   const handleYourNameFormSubmit = (e) => {
     e.preventDefault()
-    const name = e.target.name.value
-    alert('Welcome back to the Linnaeus University ' + name + '!')
+    let name = e.target.name.value
+    name = name.charAt(0).toUpperCase() + name.slice(1) // Force first char in name to upper case.
+    setName(name)
+    setHasSubmitName(true)
   }
 
+  const textBeforeName = 'Welcome back to the Linnaeus university '
+  const textAfterName = '!'
   return (
     <>
-    <YourNameForm submitForm={handleYourNameFormSubmit} />
+      {hasSubmitName ? <YourNameResponse textBeforeName={textBeforeName} name={name} textAfterName={textAfterName}  /> : <YourNameForm submitForm={handleYourNameFormSubmit} />}
     </>
   )
 }
