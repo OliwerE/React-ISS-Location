@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './your-name.css'
 import YourNameForm from './YourNameForm'
 import YourNameResponse from './YourNameResponse'
+import IssLocation from './IssLocation'
 
 const YourName = () => {
   const [hasSubmitName, setHasSubmitName] = useState(false)
@@ -17,9 +18,10 @@ const YourName = () => {
 
   const textBeforeName = 'Welcome back to the Linnaeus university '
   const textAfterName = '!'
+  const yourNameResponseChildComponents = [IssLocation]
   return (
     <>
-      {hasSubmitName ? <YourNameResponse textBeforeName={textBeforeName} name={name} textAfterName={textAfterName}  /> : <YourNameForm submitForm={handleYourNameFormSubmit} />}
+      {hasSubmitName ? <YourNameResponse textBeforeName={textBeforeName} name={name} textAfterName={textAfterName} childComponents={yourNameResponseChildComponents} /> : <YourNameForm submitForm={handleYourNameFormSubmit} />}
     </>
   )
 }
