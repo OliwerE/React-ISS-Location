@@ -12,7 +12,7 @@ const IssMapLocation = ({ issLocation, showCoordinates, refreshIssLocation }) =>
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyABWPKtKCYlTKKBbHY6PReiBB99aR2lJzY' }}
         defaultCenter={{ lat: parseInt(latitude), lng: parseInt(longitude)}}
-        defaultZoom={5}
+        defaultZoom={2}
       >
         <MapMarker
           lat={parseInt(latitude)}

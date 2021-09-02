@@ -48,14 +48,14 @@ const IssLocation = () => {
 
   const userQuestion = (
     <>
-      <h1>Do you want to know the current position of the international space station?</h1>
+      <h1>Do you want to know the current position of the International Space Station (ISS)?</h1>
       <button id="get-iss-location-btn" onClick={handleOnGetLocation}>Tell me!</button>
     </>
   )
 
     const issData = (
       <>
-        <h1>Current position of the international space station:</h1>
+        <h1>Current position of the International Space Station</h1>
         {showMap ? <IssMapLocation issLocation={issLocation} showCoordinates={handleShowCoordinates} refreshIssLocation={handleRefreshIssLocation} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} refreshIssLocation={handleRefreshIssLocation} />}
       </>
     )
