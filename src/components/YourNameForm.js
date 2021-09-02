@@ -5,9 +5,9 @@ const YourNameForm = ({ submitForm }) => {
   return (
     <div id="your-name-form">
       <form onSubmit={submitForm}>
-        <label htmlFor="name" >What's your name?</label>
+        <label htmlFor="your-name" >What's your name?</label>
         <br />
-        <input id="name" name="name" type="text" minLength="1" placeholder="Name" required/>
+        <input id="name" name="your-name" type="text" minLength="1" placeholder="Name" required/>
         <br />
         <input id="submit-button" type="submit" value="Continue" />
       </form>

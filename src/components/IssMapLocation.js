@@ -1,5 +1,4 @@
 import React from 'react'
-import './iss-map-location.css'
 import './iss-coordinates.css'
 import GoogleMapReact from 'google-map-react'
 import MapMarker from './MapMarker'

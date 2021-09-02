@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './your-name.css'
 import YourNameForm from './YourNameForm'
 import YourNameResponse from './YourNameResponse'
 import IssLocation from './IssLocation'
