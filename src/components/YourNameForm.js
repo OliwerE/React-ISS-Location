@@ -5,7 +5,7 @@ const YourNameForm = ({ submitForm }) => {
   return (
     <>
       <form onSubmit={submitForm}>
-        What's your name? <input id="name" type="text" placeholder="Name" />
+        What's your name?* <input id="name" type="text" minLength="1" placeholder="Name" required/>
         <input type="submit" value="Send" />
       </form>
     </>

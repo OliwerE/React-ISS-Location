@@ -18,7 +18,7 @@ const IssMapLocation = ({ issLocation, showCoordinates }) => {
           title={`Latitude: ${latitude}, Longitude: ${longitude}`}
         />
       </GoogleMapReact>
-      <a target="_blank" without rel="noreferrer" href="https://icons8.com/icon/13800/marker">Marker</a> icon by <a target="_blank" without rel="noreferrer" href="https://icons8.com">Icons8</a>
+      <a target="_blank" without="true" rel="noreferrer" href="https://icons8.com/icon/13800/marker">Marker</a> icon by <a target="_blank" without="true" rel="noreferrer" href="https://icons8.com">Icons8</a>
       <br/>
       <button onClick={() => showCoordinates()}>Show coordinates</button>
     </div>

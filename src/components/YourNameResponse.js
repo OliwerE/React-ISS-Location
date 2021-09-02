@@ -8,8 +8,8 @@ const YourNameResponse = ({ textBeforeName, name, textAfterName, childComponents
         <h1>{textBeforeName + name + textAfterName}</h1>
       </div>
       <div id="child-components">
-        {childComponents && childComponents.map(ChildComponent => {
-          return <ChildComponent />
+        {childComponents && childComponents.map((ChildComponent, i) => {
+          return <ChildComponent key={i} />
         })}
       </div>
     </div>

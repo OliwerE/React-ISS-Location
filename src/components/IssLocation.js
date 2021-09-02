@@ -15,7 +15,6 @@ const IssLocation = () => {
       return res.json()
     }).then(json => {
       const { longitude, latitude } = json.iss_position
-      console.log(longitude, latitude)
       setIssLocation({ longitude, latitude })
       setLoaded(true)
     }).catch(err => {
@@ -48,6 +47,7 @@ const IssLocation = () => {
 
     const issData = (
       <>
+        <h1>Current position of the international space station:</h1>
         {showMap ? <IssMapLocation issLocation={issLocation} showCoordinates={handleShowCoordinates} /> : <IssCoordinates showMap={handleShowMap} issLocation={issLocation} />}
       </>
     )
